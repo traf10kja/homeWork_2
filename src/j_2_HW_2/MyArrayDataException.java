@@ -1,4 +1,20 @@
 package j_2_HW_2;
 
-public class MyArrayDataException {
+public class MyArrayDataException extends RuntimeException{
+    private int line;
+    private int column;
+
+    public int getLine() {
+        return line;
+    }
+
+    public int getColumn() {
+        return column;
+    }
+
+    public MyArrayDataException(String message, int line, int column) {
+        super(message);
+        this.line = line;
+        this.column = column;
+    }
 }
